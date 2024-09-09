@@ -11,7 +11,7 @@ class PersonRepository {
       if (response.statusCode == 200) {
         final responseMap = response.data;
 
-        final List<Person> personList = responseMap.map<Person>((person) => Person.fromMap(person));
+        final List<Person> personList = responseMap.map<Person>((person) => Person.fromMap(person)).toList();
 
         return personList;
       } else {
